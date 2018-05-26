@@ -17,7 +17,7 @@ app.layout = html.Div([
 def display_page(pathname):
     if pathname == '/':
         return index.layout
-    elif pathname == '/apps/app1':
+    elif pathname == '/apps/monitorchargeback':
          return MonitorChargeback.layout
     elif str(pathname).lower() == '/apps/monitorconciliacao':
          return MonitorConciliacao.layout
@@ -27,4 +27,4 @@ def display_page(pathname):
         return '404'
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=8051)

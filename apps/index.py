@@ -5,11 +5,11 @@ import dash_html_components as html
 from app import app
 
 layout = html.Div([
-    dcc.Link('Navigate to "/"', href='/'),
+    dcc.Link('Home', href='/'),
     html.Br(),
-    dcc.Link('Navigate to Monitor da Conciliação', href='/apps/MonitorConciliacao'),
+    dcc.Link('Conciliação', href='/apps/MonitorConciliacao'),
     html.Br(),
     dcc.Link('Acompanhamento Aprovação de Pedidos"', href='/apps/analisevendasaprovadas'),
     html.Br(),
-    dcc.Link('Navigate to "/apps/app2"', href='/apps/app1')
+    dcc.Link('Mapa de Chargeback"', href='/apps/monitorchargeback')
 ])

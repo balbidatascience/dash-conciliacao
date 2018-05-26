@@ -15,7 +15,7 @@ import copy
 MAP_BOX_ACCESS_KEY = 'pk.eyJ1IjoiZ2FicmllbG1sZyIsImEiOiJjamZibmFibWgzMHFrMnhwNGZnN2w0ZzVmIn0.E32pbcfKBFON9p3D532Uaw'
 map_data = pd.read_csv(os.getcwd() + '/datasets/mapDemoCbk.csv', sep=';', encoding='latin_1')
 # Estou aqui!!
-#map_data['Legend'] = map(lambda x: x['Local'] + ' - ', map_data)
+map_data['Legend'] = map(lambda x: x['Local'] + ' - ', map_data)
 
 layout_tmp = dict(
     autosize=True,
@@ -34,7 +34,7 @@ layout_tmp = dict(
     legend=dict(font=dict(size=10), orientation='h'),
     title='Mapa de Fraude',
     mapbox=dict(
-        accesstoken='', #MAP_BOX_ACCESS_KEY,
+        accesstoken=MAP_BOX_ACCESS_KEY,
         style="light",
         center=dict(
             lon=-48.0774443,
